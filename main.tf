@@ -40,11 +40,3 @@ resource "digitalocean_loadbalancer" "web" {
 
   droplet_ids = digitalocean_droplet.web.*.id
 }
-
-
-# resource "digitalocean_record" "main" {
-#   domain = digitalocean_domain.domain.name
-#   type   = "A"
-#   name   = "@"
-#   value  = digitalocean_droplet.web.0.ipv4_address
-# }
